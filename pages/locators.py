@@ -17,5 +17,3 @@ class LoginPageLocators():
     PASSWORD_FORM_REG = (By.CSS_SELECTOR, "form#register_form input#id_registration-password1")
     PASSWORD_CONFIRM_FORM_REG = (By.CSS_SELECTOR, "form#register_form input#id_registration-password2")
     REGISTER_BUTTON_REG = (By.CSS_SELECTOR, "form#register_form button")
-
-    CUR_URL = By.current_url
