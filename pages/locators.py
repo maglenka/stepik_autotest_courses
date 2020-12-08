@@ -17,3 +17,11 @@ class LoginPageLocators():
     PASSWORD_FORM_REG = (By.CSS_SELECTOR, "form#register_form input#id_registration-password1")
     PASSWORD_CONFIRM_FORM_REG = (By.CSS_SELECTOR, "form#register_form input#id_registration-password2")
     REGISTER_BUTTON_REG = (By.CSS_SELECTOR, "form#register_form button")
+
+
+class ProductPageLocators():
+    ADD_BUTTON = (By.CSS_SELECTOR, "form#add_to_basket_form button.btn.btn-lg.btn-primary.btn-add-to-basket")
+    BOOK_NAME_IN_CATALOGUE = (By.CSS_SELECTOR, "div.col-sm-6.product_main h1")
+    PRICE_IN_CATALOGUE = (By.CSS_SELECTOR, "div.col-sm-6.product_main p.price_color")
+    BOOK_NAME_IN_ALERT = (By.CSS_SELECTOR, "div.alertinner strong")
+    PRICE_IN_ALERT = (By.CSS_SELECTOR, "div.alert.alert-safe.alert-noicon.alert-info.fade.in div.alertinner p strong")
