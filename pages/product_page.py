@@ -28,9 +28,3 @@ class ProductPage(BasePage):
     def should_dissapear_of_success_message(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but should not be"
-
-    def go_to_empty_basket(self):
-        basket_button = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
-        basket_button.click()
-        assert self.is_not_element_present(*BasketPageLocators.ITEM_IN_CART), "There are items in the cart."
-        assert self.is_element_present(*BasketPageLocators.EMPTY_MESSAGE), "Text is not presented"

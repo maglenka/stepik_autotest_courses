@@ -14,6 +14,6 @@ class BasketPage(BasePage):
         link = self.browser.find_element(*BasketPageLocators.LOGIN_LINK)
         link.click()
 
-    def should_be_empty_basket(self):
+    def basket_should_be_empty(self):
         assert self.is_not_element_present(*BasketPageLocators.ITEM_IN_CART), "There are items in the cart."
         assert self.is_element_present(*BasketPageLocators.EMPTY_MESSAGE), "Text is not presented"
