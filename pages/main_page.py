@@ -1,5 +1,6 @@
 from .base_page import BasePage
 from .locators import MainPageLocators
+from .locators import BasketPageLocators
 
 
 class MainPage(BasePage):
@@ -16,3 +17,9 @@ class MainPage(BasePage):
     def go_to_login_page(self):
         link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         link.click()
+
+    def go_to_empty_basket(self):
+        basket_button = self.browser.find_element(*MainPageLocators.BASKET_BUTTON)
+        basket_button.click()
+        assert self.is_not_element_present(*BasketPageLocators.ITEM_IN_CART), "There are items in the cart."
+        assert self.is_element_present(*BasketPageLocators.EMPTY_MESSAGE), "Text is not presented"
