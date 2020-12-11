@@ -1,11 +1,11 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
+class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
-class LoginPageLocators():
+class LoginPageLocators:
     BLOCK_HEADER = (By.CSS_SELECTOR, "form#login_form h2")
     EMAIL_FORM = (By.CSS_SELECTOR, "form#login_form input#id_login-username")
     PASSWORD_FORM = (By.CSS_SELECTOR, "form#login_form input#id_login-password")
@@ -19,10 +19,16 @@ class LoginPageLocators():
     REGISTER_BUTTON_REG = (By.CSS_SELECTOR, "form#register_form button")
 
 
-class ProductPageLocators():
+class ProductPageLocators:
     ADD_BUTTON = (By.CSS_SELECTOR, "form#add_to_basket_form button.btn.btn-lg.btn-primary.btn-add-to-basket")
     BOOK_NAME_IN_CATALOGUE = (By.CSS_SELECTOR, "div.col-sm-6.product_main h1")
     PRICE_IN_CATALOGUE = (By.CSS_SELECTOR, "div.col-sm-6.product_main p.price_color")
     BOOK_NAME_IN_ALERT = (By.CSS_SELECTOR, "div.alert.alert-safe.alert-noicon.alert-success.fade.in "
                                            "div.alertinner strong")
     PRICE_IN_ALERT = (By.CSS_SELECTOR, "div.alert.alert-safe.alert-noicon.alert-info.fade.in div.alertinner p strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div#messages div.alert-success")
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
