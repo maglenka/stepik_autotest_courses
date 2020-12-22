@@ -1,17 +1,17 @@
 from .base_page import BasePage
-from .locators import BasketPageLocators
+from .locators import BasketPageLocators, BasePageLocators
 
 
 class BasketPage(BasePage):
     def go_to_login_page(self):
-        login_link = self.browser.find_element(*BasketPageLocators.LOGIN_LINK)
+        login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
 
     def should_be_login_link(self):
-        assert self.is_element_present(*BasketPageLocators.LOGIN_LINK), "Login link is not presented"
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
     def go_to_login_page(self):
-        link = self.browser.find_element(*BasketPageLocators.LOGIN_LINK)
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
     def basket_should_be_empty(self):
