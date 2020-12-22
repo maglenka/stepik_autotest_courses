@@ -26,3 +26,14 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.PASSWORD_CONFIRM_FORM_REG), "Field 'Confirm password'" \
                                                                                       " is not presented"
         assert self.is_element_present(*LoginPageLocators.LOGIN_BUTTON), "Log in button is not presented"
+
+    def register_new_user(self, email, password):
+        email_address_field = self.browser.find_element(*LoginPageLocators.EMAIL_FORM_REG)
+        password_field = self.browser.find_element(*LoginPageLocators.PASSWORD_FORM_REG)
+        password_confirmed_field = self.browser.find_element(*LoginPageLocators.PASSWORD_CONFIRM_FORM_REG)
+        button = self.browser.find_element(*LoginPageLocators.LOGIN_BUTTON)
+
+        email_address_field.send_keys(email)
+        password_field.send_keys(password)
+        password_confirmed_field.send_keys(password)
+        button.click()
