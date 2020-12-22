@@ -92,7 +92,6 @@ class TestUserAddToBasketFromProductPage(object):
         page.add_product_to_basket()
         page.check_alert_content()
 
-    @pytest.mark.need_review
     def test_user_cant_see_success_message(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         page = ProductPage(browser, link)
